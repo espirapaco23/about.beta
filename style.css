@@ -503,13 +503,13 @@ transform: translate3d(-10px, -10px, 0);
 
 /* /devices/ */
 
-.devices{
+/* .devices{
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
     position: relative;
     
-}
+} */
 
 /* .devices__item {
     display: block;
@@ -517,14 +517,7 @@ transform: translate3d(-10px, -10px, 0);
     height: auto;
 } */
 
-.devices__item--iphone{
-    max-width: 100%;
-    position: absolute;
-    bottom: -1120px;
-    left: 599px;
-    z-index: 1;
 
-}
 
 .section__picture{
     color: #e5e5e5;
@@ -580,11 +573,21 @@ transform: translate3d(-10px, -10px, 0);
 
 .wedo{
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
 }
 
 .wedo__item{
     width: 50%;
+    padding: 0 15px;
     
+}
+
+
+.wedo__img{
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -683,6 +686,12 @@ transform: translate3d(-10px, -10px, 0);
 }
 
 .reviews__photo{
+    display: block;
+    
+
+    width: 200px;
+    height: 200px;
+
     border: 2px solid aqua;
     color: aqua;
     position: absolute;
@@ -839,8 +848,6 @@ transform: translate3d(-10px, -10px, 0);
 
 .works{
     display: flex;
-    
-    
    
     
 }
@@ -866,6 +873,8 @@ transform: translate3d(-10px, -10px, 0);
 
 .works__image{
     display: block;
+    max-width: 100%;
+    height: auto;
     transition: opasity 0.2s linear;
     
 }
@@ -970,6 +979,7 @@ transform: translate3d(-10px, -10px, 0);
 .blog{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .blog__item{
@@ -1351,6 +1361,13 @@ transform: translate3d(-10px, -10px, 0);
  .intro__title{
     font-size: 120px;
 }
+
+        /* .reviews */
+        .reviews__text{
+            font-size: 20px;
+        }
+
+
 }
 
 
@@ -1392,10 +1409,44 @@ transform: translate3d(-10px, -10px, 0);
         border-bottom: 0;
     }
 
+    
+
+
+/* .reviews */
+    .reviews{
+        padding: 0 60px;
+    }
+
+
+
+     .reviews__photo{
+         height: 150px;
+         width: 150px;
+     }
+
+
+     .rewiews__item{
+         padding-left: 175px;
+     }
+
+     .clients{
+         max-width: 600px;
+         margin: 0 auto;
+     }
+
+     .clients__item{
+         width: 100%;
+         padding-right: 0;
+     }
+
+     .clients__item:last-child{
+         margin-bottom: 0;
+     }
+
 
    
+    }
 
-}
 
 
 @media (max-width: 770px) {
@@ -1455,12 +1506,82 @@ transform: translate3d(-10px, -10px, 0);
         }
 
 
-        .devices__item--iphone{
-            width: 280px;
-            position: absolute;
-            bottom: -1020px;
-            z-index: 1;
+         /* stat */
+
+         .stat__item{
+            width: 100%;
+
+            border-bottom: 1px solid #b5eae0;
         }
+
+        .stat__item:last-child{
+            border-bottom: 0;
+        }
+
+        .stat__count{
+            font-size: 52px;
+        }
+
+
+        
+
+        /* .wedo */
+        .wedo__img{
+            display: none;
+        }
+
+        .wedo__item{
+            width: 100%;
+        }
+
+
+        /* reviews */
+        .reviews__photo{
+        position: static;
+        margin: 0 auto 20px;
+    }
+
+
+    .reviews__item{
+        padding-left: 0;
+    }
+
+    .reviews__text{
+        font-size: 16px;
+    }
+    
+    .reviews__author{
+        font-size: 20px;
+    }
+
+
+        /* kartinki */
+    .works{
+        flex-wrap: wrap;
+    }
+
+    .works__col {
+        flex: none;
+        width: 50%;
+    }
+
+     /* blogs */
+
+     .blog{
+         max-width: 380px;
+         margin: 0 auto;
+     }
+
+     .blog__item{
+        margin-bottom: 30px;
+         width: 100%;
+     }
+
+     .blog__item:last-child{
+         margin-bottom: ;
+     }
+
+
 }
 
 @media (max-width: 575px) {
@@ -1512,14 +1633,38 @@ transform: translate3d(-10px, -10px, 0);
             max-width: 320px;
         }
 
-        .devices__item--iphone{
-            width: 180px;
-            max-width: 100%;
-            position: absolute;
-            bottom: -720px;
-            left: 190px;
-            z-index: 1;
+        /* reviews */
+        .reviews{
+            padding: 0;
         }
+
+        .reviews__btn{
+            top: 24%;
+        }
+
+
+           /* kartinki */
+    .works{
+        flex-wrap: wrap;
+    }
+
+    .works__col {
+        flex: none;
+        width: 50%;
+    }
+    /* knigi */
+    .clients__photo{
+        position: static;
+    }
+
+    .clients__item{
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .clients__text:before {
+        margin: 15px auto;
+    }
 
 }
 
